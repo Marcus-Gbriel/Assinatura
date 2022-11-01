@@ -119,14 +119,16 @@
         imagettftext($imgresource, $localsize, 0,602, 185, $textcolor,$fnormal, $rua);
         imagettftext($imgresource, $localsize, 0,602, 205, $textcolor,$fnormal, $cidade);
         
-
     //Carregando imagem de perfil
         imagecopymerge($imgresource,$imgperf,20,20,0,0,$perfilx,$perfily,100);
-
 
     //Header informando que é uma imagem JPEG
         header( 'Content-type: image/jpeg; charset=utf-8' );
 
     //Envia a imagem para o borwser ou arquivo
         imagejpeg( $imgresource, NULL, 80 );
+
+    //Apagar imagem
+        unlink('imagens/nova.jpg');
+        unlink('imagens/perfil.jpg');
 ?>
