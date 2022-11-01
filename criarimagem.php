@@ -48,7 +48,7 @@
             $nome = urldecode( $_GET['nome']);
             $nomesize = "25";
             $sobrenome = urldecode( $_GET['sobrenome']);
-            $sobrenomesize ="18";
+            $sobrenomesize ="25";
             $cargo = urldecode( $_GET['cargo']);
             $cargosize = "12";
             $ramal = urldecode( $_GET['ramal']);
@@ -109,7 +109,7 @@
 
     //Escreve na imagen
         imagettftext($imgresource, $nomesize, 0,270, 60, $textcolor,$fnegrito, $nome);
-        imagettftext($imgresource, $sobrenomesize, 0,270, 85, $textcolor,$fnegrito, $sobrenome);
+        imagettftext($imgresource, $sobrenomesize, 0,270, 90, $textcolor,$fnegrito, $sobrenome);
         imagettftext($imgresource, $cargosize, 0,270, 120, $textcolor,$fnormal, $cargo);
         imagettftext($imgresource, $setorsize, 0,270, 160, $textcolor,$fnormal, $fsetor);
         imagettftext($imgresource, $localsize, 0,270, 205, $textcolor,$fnormal, $celphone);
